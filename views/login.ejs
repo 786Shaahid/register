@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <style>
+      #heading {
+        width: 100vw;
+        height: 10vh;
+        background-color: rgb(18, 186, 130);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form {
+        width: 50vw;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px auto;
+        background-color: rgb(225, 241, 199);
+      }
+      input {
+        width: 200px;
+        height: 25px;
+        font-size: 15px;
+        padding-left: 10px;
+      }
+      label {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      button {
+        width: 100px;
+        height: 30px;
+        background-color: rgb(222, 222, 168);
+        font-size: 20px;
+        font-weight: 300;
+        box-shadow: 2px 2px 3px 2px rgb(195, 192, 210);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="heading">
+      <h1>LOG IN</h1>
+    </div>
+    <div class="form">
+      <form action="/api/users/login" method="post">
+        <label for="mail">Email</label><br />
+        <input
+          type="email"
+          placeholder="Email Id"
+          id="mail"
+          name="email"
+          required
+        /><br /><br />
+
+        <label for="password">Password</label><br />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          id="password"
+          name="password"
+          required
+        /><br /><br /><br />
+
+        <button type="submit">submit</button>
+      </form>
+    </div>
+  </body>
+</html>
