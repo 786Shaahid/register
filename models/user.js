@@ -4,7 +4,6 @@ const mongoose=require('mongoose');
   username:{
     type:String,
     required:true,
-
   },
   email:{
     type:String,
@@ -14,11 +13,7 @@ const mongoose=require('mongoose');
   password:{
     type:String,
     required:true
-  },
-  conformpassword:{
-    type:String,
-    required:true
   }
-},{timespan:true})
+},{timestamps:true})
 
 module.exports=mongoose.model("Formdata",personSchema);

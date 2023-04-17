@@ -13,9 +13,9 @@ const app = express();
 
 app.set('view engine','ejs')
 
-// app.use(express.json());
+app.use(express.json());
 // app.use(express.urlencoded());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
 
 const personSchema=require('./routes/routers')
 app.use('/api/users',personSchema);
